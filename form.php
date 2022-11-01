@@ -148,7 +148,6 @@ $form_input = array(
 	"item1" => array("title" => "お名前", "name" => "item1", "func" => "2", "require" => "1", "check" => "1",),
 	"item2" => array("title" => "メールアドレス", "name" => "item2", "func" => "2", "require" => "1", "check" => "3",),
 	"item3" => array("title" => "生年月日", "name" => "item3", "func" => "11", "require" => "1", "check" => "1",),
-  "item4" => array("title" => "test", "name" => "item4", "func" => "7", "require" => "1", "check" => "1",),
 
 );
 // 入力値の取得
@@ -370,6 +369,8 @@ echo eval("?>" . $contents);
  */
 function sendmail($mail_from, $mail_to, $mail_subject, $body, $attach, $from_name=null)
 {
+  return;
+  
 	$mail_from = trim($mail_from);
 	$mail_to = trim($mail_to);
 	$mail_subject = trim($mail_subject);
