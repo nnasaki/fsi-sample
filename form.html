@@ -40,14 +40,15 @@
 
 <section>
 
-<h2>お問い合わせフォーム</h2>
+<h2>お見積り依頼</h2>
+<p>お見積り用のリンクを入力いただいたメールアドレスに送付します。</p>
 
 <!-- フォームの情報はここからです -->
 <form name="form1" enctype="multipart/form-data" method="post" action="<?php echo $_SERVER["REQUEST_URI"];?>">
 <input type="hidden" name="mode" value="form">
 <table class="ta1">
 <!-- 入力／確認 -->
-<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+<!--<tr><th class="tamidashi" colspan="2">お見積り</th></tr>-->
 <tr>
 <th width="150">お名前<span style="color:red">※</span></th>
 <td>
@@ -118,6 +119,26 @@
 </select>
 日
 <?php if ($msg["item3"]) echo '<div style="color:red">' . $msg["item3"] . '</div>'; ?></td>
+</tr>
+<tr>
+<th>性別<span style="color:red">※</span></th>
+<td>
+<label><input name="item4" type="radio" value="1" <?php if ($form["item4"]==1) echo 'checked="checked"';?> />男</label><br />
+<label><input name="item4" type="radio" value="2" <?php if ($form["item4"]==2) echo 'checked="checked"';?> />女</label><br />
+
+<?php if ($msg["item4"]) echo '<div style="color:red">' . $msg["item4"] . '</div>'; ?></td>
+</tr>
+<tr>
+<th>申し込み種類<span style="color:red">※</span></th>
+<td>
+<select name="item5">
+<option value="">選択してください</option>
+<option value="1" <?php if ($form["item5"]==1) echo 'selected="selected"';?>>生命保険</option>
+<option value="2" <?php if ($form["item5"]==2) echo 'selected="selected"';?>>医療保険</option>
+<option value="3" <?php if ($form["item5"]==3) echo 'selected="selected"';?>>自動車保険</option>
+
+</select>
+<?php if ($msg["item5"]) echo '<div style="color:red">' . $msg["item5"] . '</div>'; ?></td>
 </tr>
 
 </table>
@@ -190,6 +211,6 @@
 
 <!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
-
+<script src="js/sitecore-cdp-library.js"></script>
 </body>
 </html>

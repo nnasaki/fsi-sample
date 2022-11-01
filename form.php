@@ -148,6 +148,8 @@ $form_input = array(
 	"item1" => array("title" => "お名前", "name" => "item1", "func" => "2", "require" => "1", "check" => "1",),
 	"item2" => array("title" => "メールアドレス", "name" => "item2", "func" => "2", "require" => "1", "check" => "3",),
 	"item3" => array("title" => "生年月日", "name" => "item3", "func" => "11", "require" => "1", "check" => "1",),
+  "item4" => array("title" => "性別", "name" => "item4", "func" => "3", "require" => "1", "check" => "1", "list"=>array("1" => "男", "2" => "女", )),
+	"item5" => array("title" => "申し込み種類", "name" => "item5", "func" => "5", "require" => "1", "check" => "1", "list"=>array("1" => "生命保険", "2" => "医療保険", "3" => "自動車保険", )),
 
 );
 // 入力値の取得
