@@ -72,7 +72,18 @@
 <?php echo $form["item3_year"];?>年<?php echo $form["item3_month"];?>月<?php echo $form["item3_day"];?>日
 </td>
 </tr>
-
+<tr>
+<th>性別<span style="color:red">※</span></th>
+<td>
+<input type="hidden" name="item4" value="<?php echo $form["item4"]; ?>">
+<?php echo $form_input["item4"]["list"][$form["item4"]]; ?></td>
+</tr>
+<tr>
+<th>申し込み種類<span style="color:red">※</span></th>
+<td>
+<input type="hidden" name="item5" value="<?php echo $form["item5"]; ?>">
+<?php echo $form_input["item5"]["list"][$form["item5"]]; ?></td>
+</tr>
   
 </table>
 
@@ -144,6 +155,6 @@
 
 <!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
-
+<script src="js/sitecore-cdp-library.js"></script>
 </body>
 </html>
