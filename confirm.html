@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>企業・ビジネスサイト向け 無料ホームページテンプレート tp_biz56</title>
+<title>LIGHT HOUSE Financial/title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
 <link rel="stylesheet" href="css/style.css">
@@ -64,12 +64,16 @@
 </td>
 </tr>
 <tr>
-<th>お問い合わせ内容</th>
+<th width="150">生年月日<span style="color:red">※</span></th>
 <td>
-<input type="hidden" name="item3" value="<?php echo $form["item3"]; ?>">
-<?php echo nl2br($form["item3"]);?>
+<input type="hidden" name="item3_year" value="<?php echo $form["item3_year"];?>">
+<input type="hidden" name="item3_month" value="<?php echo $form["item3_month"];?>">
+<input type="hidden" name="item3_day" value="<?php echo $form["item3_day"];?>">
+<?php echo $form["item3_year"];?>年<?php echo $form["item3_month"];?>月<?php echo $form["item3_day"];?>日
 </td>
 </tr>
+
+  
 </table>
 
 <p class="btn">
